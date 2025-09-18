@@ -292,7 +292,7 @@ ul a {
 /* navbar */
 @media (max-width: 576px) {
   body {
-    overflow: hidden;
+    overflow: auto;
   }
   .nav-address,
   .nav-langbar,
@@ -353,6 +353,8 @@ ul a {
     margin-top: 3px;
   }
 }
+
+/* very small mobile */
 @media (max-width: 319px) {
   body {
     min-width: 350px; /* freeze layout */
@@ -439,8 +441,14 @@ ul a {
   .bigimage-section {
     background-position: center;
   }
-  .shop-section {
+  /* .shop-section {
     gap: 5300px;
+  } */
+  .box-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px;
   }
 }
 
@@ -467,4 +475,111 @@ ul a {
     background-position: center;
     background-repeat: no-repeat;
   }
+}
+
+/*................ menu button styling.............. */
+
+.icon-btn {
+  background: none; /* remove background */
+  border: none; /* remove border */
+  padding: 0; /* remove padding */
+  cursor: pointer; /* show pointer on hover */
+  color: white; /* icon color */
+  font-size: 20px; /* icon size */
+}
+
+.icon-btn:focus {
+  outline: 2px solid #ff9800; /* custom orange focus ring */
+  outline-offset: 3px;
+}
+
+/*........... slider menu styling.......... */
+.slider-ul li a {
+  color: #111111;
+  font-weight: 700;
+  font-family: "Atkinson Hyperlegible Next", sans-serif;
+}
+
+.slider-ul li {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Atkinson Hyperlegible Next", sans-serif;
+}
+.slider-ul li a {
+  font-weight: 400;
+  color: #37475a;
+}
+
+.slider {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: white;
+  transition: right 0.3s ease;
+  z-index: 100; /* above overlay */
+  overflow-y: auto;
+}
+
+.menu-customer-name {
+  background-color: #222f3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.userborder {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff8f8;
+  margin-right: 10px;
+}
+.menu-customer-name h1 {
+  color: #fff8f8;
+  font-size: medium;
+  font-family: "Atkinson Hyperlegible Next", sans-serif;
+  font-weight: 700;
+}
+
+.slider-ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.cross {
+  display: none;
+}
+.cross.active {
+  position: absolute;
+  left: 350px;
+  top: 5px;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.374);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.6);
+  backdrop-filter: blur(4px);
+  display: none;
+  z-index: 99;
+}
+
+/* Active classes */
+.overlay.active {
+  display: block;
+}
+.slider.active {
+  left: 0;
 }

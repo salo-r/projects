@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazon.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -16,7 +22,108 @@
 
   <body>
     <header>
+      <div class="overlay" id="overlay"></div>
+      <!-- slider -->
+      <div class="slider" id="slider">
+        <div class="menu-customer-name">
+          <div class="userborder">
+            <i
+              class="fa-solid fa-user"
+              style="color: #222f3d; position: relative; top: 5px; left: 7px"
+            ></i>
+          </div>
+
+          <h1>Hello, Sign in</h1>
+        </div>
+
+        <ul class="slider-ul">
+          <strong>Digital Content & Devices</strong>
+          <li>
+            <a href="#"
+              >Prime Video <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >Amazon Music <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >Kindle E-readers & Books <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >Amazon App Store <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+        </ul>
+        <hr />
+        <ul class="slider-ul">
+          <strong>Shop by Department</strong>
+          <li>
+            <a href="">Electronics <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href="">Computers <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href="">Smart Home <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href=""
+              >Arts & Crafts <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="">See all <i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+        </ul>
+        <hr />
+        <ul class="slider-ul">
+          <strong>Programs & Features</strong>
+          <li>
+            <a href="">Gift Cards <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href=""
+              >Shop By Interest <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="">Amazon Live <i class="fa-solid fa-chevron-right"></i></a>
+          </li>
+          <li>
+            <a href=""
+              >International Shopping <i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </li>
+          <li>
+            <a href="">See all <i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+        </ul>
+        <hr />
+        <ul class="slider-ul">
+          <strong>Help & Settings</strong>
+          <li><a href="">Your Account</a></li>
+          <li><a href="">English</a></li>
+          <li><a href="">United States</a></li>
+          <li><a href="">Customer Service</a></li>
+          <li><a href="">Sign In</a></li>
+        </ul>
+      </div>
+
+      <div class="cross">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+
       <div class="navbar">
+        <div class="menu-logo">
+          <button class="icon-btn">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
         <div class="nav-logo border">
           <!-- <div class ="logo"></div> -->
         </div>
@@ -75,8 +182,13 @@
       <!-- second navbar -->
       <div class="panel">
         <div class="panel-all">
-          <i class="fa-solid fa-bars"></i>
-          All
+          <i class="fa-solid fa-bars"></i
+          ><button
+            style="border: none; background: none; color: white"
+            onclick="openSlider()"
+          >
+            All
+          </button>
         </div>
         <div class="panel-ops">
           <p>Today's Deals</p>
@@ -102,7 +214,10 @@
       <div class="box">
         <div class="box-content">
           <h2>Deals in PCs</h2>
-          <div class="box-img" style="background-image: url('pc.jpg')"></div>
+          <div
+            class="box-img"
+            style="background-image: url('/assets/pc.jpg')"
+          ></div>
           <p><a href="#">See more</a></p>
         </div>
       </div>
@@ -112,38 +227,8 @@
           <h2>Electronics</h2>
           <div
             class="box-img"
-            style="background-image: url('speaker.jpg')"
+            style="background-image: url('/assets/speaker.jpg')"
           ></div>
-          <p><a href="#">See more</a></p>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="box-content">
-          <h2>Live plants & planters</h2>
-          <div
-            class="box-img"
-            style="background-image: url('plants.jpg')"
-          ></div>
-          <p><a href="#">See more</a></p>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="box-content">
-          <h2>Easy,Elevated T-shirts</h2>
-          <div
-            class="box-img"
-            style="background-image: url('t-shirts.jpg')"
-          ></div>
-          <p><a href="#">See more</a></p>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="box-content">
-          <h2>Deals on Shoes</h2>
-          <div class="box-img" style="background-image: url('shoes.jpg')"></div>
           <p><a href="#">See more</a></p>
         </div>
       </div>
@@ -153,7 +238,7 @@
           <h2>Shop smartwatches</h2>
           <div
             class="box-img"
-            style="background-image: url('smartwatch.jpg')"
+            style="background-image: url('/assets/smartwatch.jpg')"
           ></div>
           <p><a href="#">See more</a></p>
         </div>
@@ -164,7 +249,40 @@
           <h2>Home Decor</h2>
           <div
             class="box-img"
-            style="background-image: url('home decor.jpg')"
+            style="background-image: url('/assets/home decor.jpg')"
+          ></div>
+          <p><a href="#">See more</a></p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Sales & Deals on Shoes</h2>
+          <div
+            class="box-img"
+            style="background-image: url('/assets/shoes.jpg')"
+          ></div>
+          <p><a href="#">See more</a></p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Live plants & planters</h2>
+          <div
+            class="box-img"
+            style="background-image: url('/assets/plants.jpg')"
+          ></div>
+          <p><a href="#">See more</a></p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-content">
+          <h2>Easy,Elevated T-shirts</h2>
+          <div
+            class="box-img"
+            style="background-image: url('/assets/t-shirts.jpg')"
           ></div>
           <p><a href="#">See more</a></p>
         </div>
@@ -175,7 +293,7 @@
           <h2>Beauty steals under $25</h2>
           <div
             class="box-img"
-            style="background-image: url('beauty.jpg')"
+            style="background-image: url('/assets/beauty.jpg')"
           ></div>
           <p><a href="#">See more</a></p>
         </div>
@@ -243,5 +361,25 @@
         </div>
       </div>
     </footer>
+    <script>
+      function openSlider() {
+        document.getElementById("slider").classList.add("active");
+        document.getElementById("overlay").classList.add("active");
+        document.querySelector(".cross").classList.add("active");
+
+        // prevent background scrolling
+        document.body.style.overflow = "hidden";
+        console.log("clicked , function is called.");
+      }
+
+      document.querySelector(".cross").addEventListener("click", function () {
+        document.getElementById("slider").classList.remove("active");
+        this.classList.remove("active");
+        document.getElementById("overlay").classList.remove("active");
+
+        // restore scrolling
+        document.body.style.overflow = "auto";
+      });
+    </script>
   </body>
 </html>
